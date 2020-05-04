@@ -1,0 +1,27 @@
+from flask import Flask, render_template, url_for
+app = Flask(__name__)
+print(__name__)
+
+
+#una opción básica
+@app.route('/') 
+def hello_world():
+	print(url_for('static', filename='bolt.ico'))
+	return render_template('index.html')
+
+#con esta configuración, captura lo que introduzcamos en la barra de dirección ( a mano, o a través de link creado) y usa esos datos (para devolverlos, o para buscar info con ellos)
+#en este caso, dado que "name" está en el html, nos devuelve el nombre de "username" que entremos en el navegador.
+#lo mismo con post_id, que nos devolverá en la web tras el nombre.
+#capturando esta info el servidor puede decidir que información enviar al frente
+def hello_world(username=None, post_id=None):
+	return render_template('index.html', name=username, post_id=post_id)
+#
+
+@app.route('about.html')
+def about():
+	return render_template('about.html')
+
+@app.route('/blog/2020/dogs')
+def blog2():
+	return 'this is my dog"
+

@@ -52,7 +52,7 @@ python-apt==1.6.4
 python-debian==0.1.32
 python-xapp==1.8.1
 pytz==2019.3
-pyxdg==0.25
+pyxdg==0.26
 PyYAML==3.12
 qrcode==6.1
 query-string==2019.4.13

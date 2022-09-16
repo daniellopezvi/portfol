@@ -24,7 +24,7 @@ itsdangerous==1.1.0
 jdcal==1.4.1
 Jinja2==2.11.2
 louis==3.5.0
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 menulibre==2.2.1
 mugshot==0.4.2
